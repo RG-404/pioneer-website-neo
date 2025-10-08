@@ -25,18 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <div className="px-26 ">
-        <div className="border-dashed border-x-2 border-[#D6D6D6]">
-<Navbar/>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className="xl:px-26 md:px-16 px-10">
+        <div className="border-dashed border-x-2 border-[#D6D6D6] ">
+          <Navbar />
+          {children}
         </div>
-
-      </div>
-      
+      </body>
     </html>
   );
 }

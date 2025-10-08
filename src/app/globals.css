@@ -24,3 +24,11 @@ body {
   /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background: linear-gradient(190deg,
+  #ffffff 0%,
+  #c5beeb 30%,
+  #ffffff 45%,
+  #c5beeb 100%
+  );
+}
