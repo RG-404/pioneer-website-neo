@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="xl:px-26 md:px-16 px-10">
+      <body className="xl:px-26 md:px-16 px-4">
         <div className="border-dashed border-x-2 border-[#D6D6D6] ">
           <Navbar />
           {children}
