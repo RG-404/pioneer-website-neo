@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const nav_Items = [
     { label: "Home", href: "/" },
-    { label: "Softwares", href: "/softwares" },
+    { label: "Softwares", href: "/software" },
     { label: "Tutorials", href: "/tutorials" },
     { label: "Support", href: "/support" },
   ];

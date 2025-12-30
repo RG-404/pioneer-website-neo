@@ -19,7 +19,7 @@ const Bottom = ({ heading, subHeading }: BottomProps) => {
         {/* <div className="border-[#D9D9D9] border-2 rounded-3xl w-[200px] text-center mb-3 py-1">
           {heading}
         </div> */}
-        <SectionTitle title={heading} size="xl"/>
+        <div className="text-xs border border-black/10 w-fit px-4 h-6 flex items-center justify-center rounded-full">{heading}</div>
         <div className="">
             <p className="sm:text-2xl md:text-3xl text-xl font-medium tracking-tight">{subHeading}</p>
           <p className=" text-base text-[#9C9C9C] pt-4">

@@ -4,7 +4,7 @@ import Separator from "@/components/Separator";
 import { GoArrowRight } from "react-icons/go";
 import SectionTitle from "@/components/SectionTitle";
 import Section from "@/components/Section";
-import images, { homeContent } from "../../config/images";
+import images, { homeContent } from "../../../config/images";
 
 const Software = () => {
   return (
@@ -23,7 +23,6 @@ const Software = () => {
               </p>
             </div>
           </div>
-
           <div className="md:w-[50%] w-full md:pb-0 md:py-0 py-5  xl:pr-2 ">
             <div className="flex xl:justify-center xl:items-center relative ">
               <div className="relative xl:h-[160px] xl:w-[250px] md:h-[130px] md:w-[220px] w-full sm:h-[210px]  h-[160px] rounded-lg z-10 lg:left-8 xl:left-0 left-0">
@@ -48,9 +47,9 @@ const Software = () => {
               textColor="#FFFFFF"
               border="#5B2EE1"
             /> */}
-            <Button name="SCHEDULE A DEMO" variant="primary" />
+            <Button name="EXPLORE DEMO" variant="primary" />
 
-            <Button name="CONTACT US" variant="secondary" />
+            <Button name="SCHEDULE A DEMO" variant="secondary" />
           </div>
           <span className="font-[600] text-xs text-[#222222] mt-3">
             REQUEST QUOTE
@@ -100,24 +99,23 @@ const Software = () => {
         <SectionTitle title="Synopsis" size="sm" />
         <div className="lg:w-[40%] w-full lg:text-[38px] text-[30px] space-y-3 ">
           <p className="text-2xl sm:text-3xl md:text-[36px] leading-snug">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            turpis dui,
+            An intelligent LIS that streamlines lab workflows,&nbsp;
             <span className="text-[#1100FF]">
-              eleifend accumsan quam. Nunc non leo vestibulum, laoreet tortor
-              sed, suscipit enim.
+              accelerates reporting, and ensures accuracy, compliance, and
+              scalable growth.
             </span>
           </p>
           {/* <p className="text-sm sm:text-base md:text-[18px] text-[#9C9C9C]"> */}
           <p className="text-base text-[#9C9C9C]">
-
-            Nulla facilisi. Fusce sit amet arcu nec enim fringilla lacinia. Ut
-            elit sapien, porttitor eget diam et, dictum sagittis urna. Fusce sit
-            amet mi pellentesque, volutpat eros a, consectetur neque.
+            Whether you are a standalone lab or a large diagnostic chain, our
+            LIS helps you increase throughput, reduce turnaround time, minimize
+            errors, and unlock actionable insights—turning your laboratory into
+            a high-performance, technology-driven operation.
           </p>
         </div>
       </Section>
       <Separator />
-      
+
       {/* Training Resources */}
       <Section className="lg:space-y-12 space-y-10">
         <SectionTitle title="Training Resources" size="xl" />
@@ -156,6 +154,9 @@ const Software = () => {
               amet mi pellentesque, volutpat eros a, consectetur neque.
             </p>
           </div>
+          <button className="h-8 text-sm px-8 rounded-full bg-purple-500 text-white">
+            Available soon from February 2025
+          </button>
         </div>
       </Section>
     </div>
