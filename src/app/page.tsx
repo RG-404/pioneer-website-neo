@@ -1,15 +1,15 @@
-import Hero from "@/components/Hero";
 import Image from "next/image";
 import { homeContent } from "../config/images";
 import { FaArrowRightLong } from "react-icons/fa6";
-import Bottom from "@/components/Bottom";
 import Separator from "@/components/Separator";
 import SectionTitle from "@/components/SectionTitle";
+import HomeCard from "@/components/card/HomeCard";
+import connectedAccountsSections from "../config/connectedAccountsSections"
+
 
 export default function Home() {
   return (
     <div className="">
-      {/* HERO SECTION */}
       <div className="w-full px-4 sm:px-8 md:px-12 pb-10 ">
         <div className="pt-16 sm:pt-24 md:pt-32 ">
           {/* <div className="sm:text-2xl md:text-3xl space-y-3 font-dm-sans tracking-tight "> */}
@@ -49,11 +49,9 @@ export default function Home() {
       </div>
       <Separator />
 
-      {/* Our Story */}
       <div className="w-full flex flex-col lg:flex-row px-4 md:px-12 py-10">
         <div className="w-full lg:w-1/2 mb-6 lg:mb-0 ">
-          
-          <SectionTitle title="Our Story" size="sm"/>
+          <SectionTitle title="Our Story" size="sm" />
         </div>
 
         <div className="w-full lg:w-1/2 lg:px-6  space-y-4 tracking-tighter">
@@ -72,16 +70,60 @@ export default function Home() {
         </div>
       </div>
       <Separator />
+     {/* Bottom card section in home page*/}
+      <div>
+        {connectedAccountsSections.map((section) => (
+          <div
+            key={section.id}
+            className="lg:py-10 py-8 lg:px-14 md:px-10 px-5"
+          >
+            <div className="py-10 md:space-y-12 space-y-10">
+              <div className="text-xs border border-black/10 w-fit px-4 h-6 flex items-center justify-center rounded-full">
+                {section.heading}
+              </div>
 
-      <Bottom
-        heading="Flagship Software"
-        subHeading="Pioneer® Connected Clinic ™"
-      />
-      <Separator/>
-      <Bottom
-        heading="Flagship Software"
-        subHeading="Pioneer® Connected Accounts ™"
-      />
+              <div>
+                <p className="sm:text-2xl md:text-3xl text-xl font-medium tracking-tight">
+                  {section.subHeading}
+                </p>
+                <p className="text-base text-[#9C9C9C] pt-4">
+                  The must have essential software to run operations in a
+                  trusted clinic.
+                  <br /> From your local general clinic to super speciality
+                  clinics.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative rounded-lg">
+              <div className="hidden lg:block relative w-full h-[600px] rounded-lg overflow-hidden">
+                <Image
+                  src={section.backgroundImage}
+                  alt="heroimage"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              <div className="relative lg:absolute lg:bottom-10 w-full lg:px-16">
+                <div className="max-w-7xl mx-auto bg-white rounded-xl border border-gray-300 p-4 sm:py-6 sm:px-4 shadow-md">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                    {section.cards.map((card) => (
+                      <HomeCard
+                        key={card.id}
+                        icon={card.icon}
+                        title={card.title}
+                        description={card.description}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
