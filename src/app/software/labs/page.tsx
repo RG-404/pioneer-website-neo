@@ -4,7 +4,10 @@ import Separator from "@/components/Separator";
 import { GoArrowRight } from "react-icons/go";
 import SectionTitle from "@/components/SectionTitle";
 import Section from "@/components/Section";
-import images, { homeContent } from "../../../config/images";
+import images, {
+  homeContent,
+  labSoftwareScreenShots,
+} from "../../../config/images";
 
 const Software = () => {
   return (
@@ -47,7 +50,9 @@ const Software = () => {
               textColor="#FFFFFF"
               border="#5B2EE1"
             /> */}
-            <Button name="EXPLORE DEMO" variant="primary" />
+            <a href="https://labs.pioneerregis.com/preview" target="_blank">
+              <Button name="EXPLORE DEMO" variant="primary" />
+            </a>
 
             <Button name="SCHEDULE A DEMO" variant="secondary" />
           </div>
@@ -63,11 +68,11 @@ const Software = () => {
         <SectionTitle title="Screenshots" size="lg" />
         <div className="space-y-5">
           <div className=" w-full my-2  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[67%_33%] gap-5">
-            {homeContent.heroImages.map((item, index) => (
+            {labSoftwareScreenShots.images.map((item, index) => (
               <div
                 key={`hero-image-${index + 1}`}
                 className={`
-                  bg-neutral-400 min-h-64 rounded-xl overflow-hidden
+                  bg-neutral-400 rounded-xl overflow-hidden
                   ${
                     index === 0
                       ? "md:col-span-2 lg:col-span-1 lg:row-span-2"

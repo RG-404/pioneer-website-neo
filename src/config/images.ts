@@ -11,6 +11,12 @@ import Hero1 from "../../public/images/hero-1.png";
 import Hero2 from "../../public/images/hero-2.jpg";
 import Hero3 from "../../public/images/hero-3.jpg";
 
+
+import Lab1 from "../../public/images/lab-screenshots/l-1.png";
+import Lab2 from "../../public/images/lab-screenshots/l-2.png";
+import Lab3 from "../../public/images/lab-screenshots/l-3.png";
+
+
 const images = {
   dashboard: dashboard,
   main: hero,
@@ -21,6 +27,10 @@ const images = {
 
 export const homeContent = {
   heroImages: [Hero1, Hero2, Hero3],
+};
+
+export const labSoftwareScreenShots = {
+  images: [Lab1, Lab2, Lab3],
 };
 
 export default images;
