@@ -8,6 +8,29 @@ import images, {
   homeContent,
   labSoftwareScreenShots,
 } from "../../../config/images";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pioneer Regis® Labs Software",
+  description:
+    "An intelligent LIS that streamlines lab workflows, accelerates reporting, and ensures accuracy, compliance, and scalable growth.",
+  openGraph: {
+    title: "Pioneer Regis® Labs Software",
+    description:
+      "An intelligent LIS that streamlines lab workflows, accelerates reporting, and ensures accuracy, compliance, and scalable growth.",
+    url: "https://pioneerregis.com/software",
+    siteName: "Pioneer Regis",
+    type: "website",
+    images: [
+      {
+        url: "https://pioneerregis.com/og/software-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Pioneer Regis Labs Software Dashboard",
+      },
+    ],
+  },
+};
 
 const Software = () => {
   return (
